@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chatLinearLayout"
+        android:id="@+id/chatRecyclerView"/>
+    <LinearLayout
+        android:id="@+id/chatLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/et_bg"
+            android:layout_marginStart="5dp"
+            android:id="@+id/messageET"/>
+        <ImageView
+            android:id="@+id/sendMessageBtn"
+            android:layout_width="30dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:foreground="?attr/actionBarItemBackground"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/send"/>
+    </LinearLayout>
+
+</RelativeLayout>
